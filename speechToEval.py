@@ -43,7 +43,7 @@ if __name__ == "__main__":
     )
     print(instructions)
     time.sleep(1)
-    
+
     while(True):
         for j in range(PROMPT_LIMIT):
             guess = recognize_speech_from_mic(recognizer, microphone)
@@ -62,7 +62,7 @@ if __name__ == "__main__":
         a=str(guess["transcription"])
         try:
             print('Answer: '+str(eval(a)))
-            breaks
+            break
         except:
             print('Error! Not Evaluable')
             print(instructions)
